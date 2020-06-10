@@ -1,0 +1,1 @@
+Projekt mojego portfolio w którym znajdują się również moje projekty graficzne 
