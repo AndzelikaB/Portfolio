@@ -13,16 +13,16 @@
     <title> Andżelika Botwina - Portfolio </title>
 
     <script>
-        $(document).ready(function() {
-            $("html").on("submit","#contact_form",function(e){
+        $(document).ready(function () {
+            $("html").on("submit", "#contact_form", function (e) {
                 e.preventDefault();
                 $("#send_form_status").html('').hide();
-                var data=$("#contact_form").serialize();
-                $.post("send_form.php",data,function(res){
+                var data = $("#contact_form").serialize();
+                $.post("send_form.php", data, function (res) {
                     $("#send_form_status").html(res.msg).show();
-                    if(res.status==1){ 
+                    if (res.status == 1) {
                         $("#contact_form")[0].reset();
-                    } 
+                    }
                 });
             });
         });
@@ -33,20 +33,22 @@
     <div id="section-home">
         <nav class="nav">
             <p> </p>
-            <!--oszukane-->
-
             <ul>
                 <li><a href="#section-about"> O mnie
-                        <hr></a> </li>
+                        <hr>
+                    </a> </li>
 
                 <li><a href="#section-skills"> Umiejętności
-                        <hr> </a></li>
+                        <hr>
+                    </a></li>
                 <li><a href="#section-projects"> Projekty
-                        <hr> </a></li>
+                        <hr>
+                    </a></li>
             </ul>
 
             <a href="#section-contact"> Kontakt
-                <hr></a>
+                <hr>
+            </a>
         </nav>
         <div class="lol">
             <div class="text">
@@ -89,12 +91,6 @@
             <hr>
         </p>
 
-        <!-- <div class="skill-lvl">
-            <div class="circle">
-                <div class="circle-inner">
-                </div>
-            </div>
-        </div> -->
 
         <div class="pack">
             <div class="card">
@@ -136,9 +132,7 @@
                 </div>
             </div>
 
-            <!-- </div>
-        <div class="pack"> -->
-            <!-- xd -->
+
             <div class="card">
                 <div class="percent">
                     <svg>
@@ -243,7 +237,8 @@
                             </div>
                         </div>
                         <div class="primary">
-                            <img src="image/fryzjer1.jpg" alt=""></div>
+                            <img src="image/fryzjer1.jpg" alt="">
+                        </div>
 
                         <div class="mockup">
                             <img class="hairdresser" src="image/fryzjer2.png" alt="">
@@ -373,7 +368,7 @@
                                         <br><br>
                                         Zakres prac: Design
                                         <br><br>
-                                        Link: <a href="Projekty-AdobeXd/Mobile.xd"> Projekt portfolio MOBILE</a> <br/>
+                                        Link: <a href="Projekty-AdobeXd/Mobile.xd"> Projekt portfolio MOBILE</a> <br />
                                         Link: <a href="Projekty-AdobeXd/Web.xd"> Projekt portfolio WEB</a>
                                     </p>
                                 </div>
@@ -390,8 +385,8 @@
                         </div>
 
                         <div class="mockup">
-                          <img class="kreacja-marki" src="image/Adobe_XD/relacje-web.jpg" alt=""> <br/><br/>
-                          <img class="kreacja-marki" src="image/Adobe_XD/relacje.jpg" alt="">
+                            <img class="kreacja-marki" src="image/Adobe_XD/relacje-web.jpg" alt=""> <br /><br />
+                            <img class="kreacja-marki" src="image/Adobe_XD/relacje.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -438,8 +433,8 @@
                         </div>
 
                         <div class="mockup">
-                            <img class="kreacja-marki" src="Kreacja_marki/wizytowka.jpg" alt=""> <br/>
-                            <img class="kreacja-marki" src="Kreacja_marki/kubek.jpg" alt=""><br/>
+                            <img class="kreacja-marki" src="Kreacja_marki/wizytowka.jpg" alt=""> <br />
+                            <img class="kreacja-marki" src="Kreacja_marki/kubek.jpg" alt=""><br />
                             <img class="kreacja_marki" src="Kreacja_marki/papier_firmowy.jpg" alt="">
                         </div>
                     </div>
@@ -471,24 +466,25 @@
                 </i>
             </div>
 
-            
+
             <form method="post" action="send_form.php" id="contact_form">
-            <div id="send_form_status" class="kolor"></div>
+                <div id="send_form_status" class="kolor"></div>
                 <input class="area field" type="text" name="name" id="name" placeholder="Imię i Nazwisko">
                 <input class="area field" type="text" name="email" id="email" placeholder="Email">
                 <textarea class="area textarea" name="message" id="message" placeholder="Wiadomość"></textarea>
                 <input class=" area send" type="submit" name="" id="sendBtn" value="Wyślij">
-                
-             </form>
+
+            </form>
         </div>
     </div>
 
     <footer>
-        Copyright © <span>&nbsp;Andżelika&nbsp;</span> Botwina 2020 <i class="fab fa-adobe fa-5x"></i>
+        Copyright © <span>&nbsp;Andżelika&nbsp; Botwina 2020</span> <i class="fab fa-adobe fa-5x"></i>
         <button id="topBtn"> <i class="fas fa-angle-up"></i> </button>
     </footer>
 
-<div class="confirmation">
-</div>
+    <div class="confirmation">
+    </div>
 </body>
+
 </html>
